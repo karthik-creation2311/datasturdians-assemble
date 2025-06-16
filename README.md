@@ -40,3 +40,4 @@ npm run dev
 ## Datasturdians Assemble
 
 - [x] Karthik R
+- [ ] Sindhu
