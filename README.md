@@ -16,15 +16,27 @@ Master Git basics and **drive your way through the GitHub workflow**.
 
 Follow these steps to get the game running locally:
 
-```bash
+
 # 1️⃣ Clone the repo
-git clone https://github.com/your-username/datasturdians-assemble.git
+```bash
+git clone https://github.com/karthik-creation2311/datasturdians-assemble.git
+```
 
 # 2️⃣ Navigate into the project
+```bash
 cd datasturdians-assemble
+```
 
 # 3️⃣ Install dependencies
+```bash
 npm install
+```
 
 # 4️⃣ Run the game in development
+```bash
 npm run dev
+```
+
+## Datasturdians Assemble
+
+- [x] Karthik R
