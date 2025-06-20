@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const stages = [
   { label: "Initialize a git repo", answer: "git init" },
   { label: "Stage all changes", answer: "git add ." },
-  { label: "Commit your changes as message", answer: 'git commit -m "message"' },
+  { label: 'Commit your changes as "message"', answer: 'git commit -m "message"' },
   { label: "Check the repo status", answer: "git status" },
   { label: "View commit history", answer: "git log" },
   { label: "Push code to remote", answer: "git push" },
@@ -14,7 +14,8 @@ export default function App() {
   const [input, setInput] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     const expected = stages[step].answer;
     if (input.trim() === expected) {
       const nextStep = step + 1;
@@ -72,6 +73,8 @@ export default function App() {
         </div>
 
         {step < stages.length && (
+          <form onSubmit={handleSubmit} className="mt-6">
+          
           <div className="mt-6">
             <input
               type="text"
@@ -81,12 +84,12 @@ export default function App() {
               className="px-4 py-2 w-full border rounded focus:outline-none focus:ring focus:ring-blue-300"
             />
             <button
-              onClick={handleSubmit}
               className="mt-4 px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
             >
               Submit
             </button>
           </div>
+          </form>
         )}
 
         {message && (
